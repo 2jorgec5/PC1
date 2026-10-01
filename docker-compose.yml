@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: postres
+    environment:
+      POSTGRES_USER: event_user
+      POSTGRES_PASSWORD: event_password
+      POSTGRES_DB: event_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postres_data:/var/lib/postgresql/data
+volumes:
+  postres_data:
+  
